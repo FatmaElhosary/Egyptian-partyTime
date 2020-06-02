@@ -15,6 +15,16 @@ $(".caption .head").click(function () {
   $(this).next().slideToggle(1000); //open or close the clicked one
   $(".detail-txt").not($(this).next()).slideUp(1000); //close all excet the clicked one
 });
+ const homeHeight = $("#home").outerHeight();
+$(window).scroll(function () {
+  if ($(window).scrollTop() > homeHeight) {
+    $(".open-nav").hide();
+  } else {
+    $(".open-nav").show();
+  }
+} );
+
+ 
 ///////////////end Details Section ///////////////////
 //contact Section////////////////////
 //var reg = /^[\w@-]{0,100}$/; //// \w any char or number capital or small or _
